@@ -1,0 +1,201 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --bg: #f4f1ec;
+  --bg-2: #ece8e0;
+  --bg-3: #e2ddd4;
+  --surface: #ffffff;
+  --ink: #0d0c0a;
+  --ink-2: #1a1916;
+  --muted: rgba(13, 12, 10, 0.45);
+  --faint: rgba(13, 12, 10, 0.1);
+  --line: rgba(13, 12, 10, 0.1);
+  --orange: #0057ff;
+  --orange-dim: rgba(0, 87, 255, 0.1);
+  --orange-glow: rgba(0, 87, 255, 0.06);
+  --nav-h: 72px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius: 14px;
+  --bg-hero: #EEF2F7;
+
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--orange);
+  --primary-foreground: #ffffff;
+  --secondary: var(--bg-2);
+  --secondary-foreground: var(--ink);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--orange);
+  --muted-foreground: var(--muted);
+}
+
+@theme inline {
+  --font-sans: var(--font-dm-sans), "DM Sans", sans-serif;
+  --font-serif: var(--font-fraunces), "Fraunces", Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-[var(--bg)] text-[var(--ink)] overflow-x-hidden leading-relaxed;
+  }
+  ::selection {
+    @apply bg-[var(--orange)] text-white;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.reveal.up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Orb animations */
+@keyframes spinRing {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes coreBreath {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+    opacity: 1;
+  }
+}
+
+@keyframes orbitDot1 {
+  0%,
+  100% {
+    top: 5%;
+    left: 50%;
+  }
+  25% {
+    top: 50%;
+    left: 95%;
+  }
+  50% {
+    top: 95%;
+    left: 50%;
+  }
+  75% {
+    top: 50%;
+    left: 5%;
+  }
+}
+
+@keyframes orbitDot2 {
+  0%,
+  100% {
+    top: 50%;
+    left: 5%;
+  }
+  25% {
+    top: 5%;
+    left: 50%;
+  }
+  50% {
+    top: 50%;
+    left: 95%;
+  }
+  75% {
+    top: 95%;
+    left: 50%;
+  }
+}
+
+@keyframes orbitDot3 {
+  0%,
+  100% {
+    bottom: 8%;
+    right: 20%;
+  }
+  50% {
+    bottom: 90%;
+    right: 20%;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tickerPartners {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Partner item hover effect */
+.partner-item {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(13, 12, 10, 0.2);
+}
+.partner-item:hover {
+  color: var(--orange);
+  -webkit-text-stroke: 0px;
+}
