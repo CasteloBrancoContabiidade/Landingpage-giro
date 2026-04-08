@@ -7,7 +7,6 @@ const services = [
   {
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-[22px] h-[22px]">
-        {/* Ícone tecnológico: cubo digital */}
         <rect x="6" y="6" width="28" height="28" rx="4" stroke="currentColor" strokeWidth="1.5" />
         <path d="M14 20h12M20 14v12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <circle cx="20" cy="20" r="2" fill="currentColor" />
@@ -19,7 +18,6 @@ const services = [
   {
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-[22px] h-[22px]">
-        {/* Ícone tecnológico: fluxo/automatização */}
         <circle cx="20" cy="20" r="14" stroke="currentColor" strokeWidth="1.5" />
         <path d="M20 6v28M6 20h28M10 10l20 20M10 30l20-20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
@@ -30,7 +28,6 @@ const services = [
   {
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-[22px] h-[22px]">
-        {/* Ícone tecnológico: plataforma / rede */}
         <rect x="6" y="10" width="28" height="20" rx="3" stroke="currentColor" strokeWidth="1.5" />
         <path d="M14 16h12M14 24h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M20 10v20" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
@@ -42,7 +39,6 @@ const services = [
   {
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-[22px] h-[22px]">
-        {/* Ícone tecnológico: escala / crescimento */}
         <circle cx="20" cy="20" r="6" stroke="currentColor" strokeWidth="1.5" />
         <path d="M20 4v32M4 20h32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M8 8l24 24M8 32L32 8" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
@@ -54,7 +50,6 @@ const services = [
   {
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-[22px] h-[22px]">
-        {/* Ícone tecnológico: integrações / conexões */}
         <rect x="10" y="10" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="15" cy="15" r="2" fill="currentColor" />
         <circle cx="25" cy="15" r="2" fill="currentColor" />
@@ -69,7 +64,6 @@ const services = [
   {
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-[22px] h-[22px]">
-        {/* Ícone tecnológico: interface / UX */}
         <rect x="8" y="12" width="24" height="18" rx="3" stroke="currentColor" strokeWidth="1.5" />
         <path d="M14 12V9a2 2 0 014 0v3M22 12V9a2 2 0 014 0v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M12 24h16M12 28h16" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
@@ -86,19 +80,19 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   return (
     <div
       ref={ref}
-      className="reveal group bg-white p-8 relative overflow-hidden transition-all duration-300 rounded-2xl border border-gray-200 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:border-blue-300"
+      className="reveal group bg-white/90 backdrop-blur-md p-8 relative overflow-hidden transition-all duration-300 rounded-2xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-3 hover:shadow-[0_20px_60px_rgba(0,0,0,0.15)] before:absolute before:inset-0 before:rounded-2xl before:border before:border-white/10 before:pointer-events-none"
       style={{ transitionTimingFunction: "var(--ease)" }}
     >
       {/* glow */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/10 to-transparent" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/20 to-transparent" />
 
       {/* ÍCONE */}
-      <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-50 text-blue-600 mb-6 transition-all duration-300 group-hover:scale-110 relative z-10">
+      <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 ring-1 ring-blue-500/20 mb-6 transition-all duration-300 group-hover:scale-110 relative z-10">
         {service.icon}
       </div>
 
       {/* TÍTULO */}
-      <h3 className="font-serif text-[1.3rem] font-black tracking-tight mb-3 transition-colors duration-300 group-hover:text-[var(--orange)] relative z-10 text-black">
+      <h3 className="text-[1.3rem] font-medium tracking-tight mb-3 transition-colors duration-300 group-hover:text-[var(--orange)] relative z-10 text-black">
         {service.title}
       </h3>
 
@@ -116,7 +110,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       </Link>
 
       {/* linha animada */}
-      <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--orange)] transition-all duration-500 group-hover:w-full" />
+      <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 group-hover:w-full" />
     </div>
   )
 }
@@ -127,7 +121,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="py-[120px] relative overflow-hidden text-white bg-gradient-to-br from-[#EAF2FF] to-[#2563EB]"
+      className="py-[120px] relative overflow-hidden text-white bg-gradient-to-br from-[#EAF2FF] via-[#3B82F6] to-[#1E3A8A]"
     >
       {/* glow fundo */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -141,9 +135,9 @@ export function Services() {
             01 — Produtos
           </div>
 
-          <h2 className="font-serif text-[clamp(2.6rem,5vw,4.2rem)] font-black leading-none tracking-tight text-white mb-6">
+          <h2 className="text-[clamp(2.6rem,5vw,4.2rem)] font-bold tracking-[-0.02em] leading-none text-white mb-6">
             O que a GiroHub
-            <span className="text-[var(--orange)]"> <em>entrega</em></span>
+            <span className="text-[var(--orange)]"> entrega</span>
           </h2>
         </div>
 
