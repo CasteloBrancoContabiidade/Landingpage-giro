@@ -136,8 +136,8 @@ export function Services() {
           </div>
 
           <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-[-0.02em] leading-none text-white mb-6">
-            O que
-            <span className="text-[var(--orange)]"> entregamos</span>
+            O que entregamos
+            <span className="text-[var(--orange)]"></span>
           </h2>
         </div>
 
