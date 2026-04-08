@@ -62,13 +62,13 @@ export function Testimonials() {
   const headerRef = useReveal()
 
   return (
-    <section id="testimonials" className="py-[120px] bg-black">
+    <section id="testimonials" className="py-[120px] bg-white">
       <div className="w-[90%] max-w-[1180px] mx-auto">
         <div ref={headerRef} className="reveal text-center mb-14">
           <div className="flex items-center gap-2.5 text-[0.72rem] font-semibold tracking-[0.2em] uppercase text-[var(--orange)] mb-5 justify-center">
             05 — Depoimentos
           </div>
-          <h2 className="font-serif text-[clamp(2.6rem,5vw,4.2rem)] font-black leading-none tracking-tight text-white mb-6">
+          <h2 className="font-serif text-[clamp(2.6rem,5vw,4.2rem)] font-black leading-none tracking-tight text-black mb-6">
             O que dizem <em className="italic font-bold text-[var(--orange)]">sobre nós</em>
           </h2>
         </div>
