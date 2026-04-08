@@ -8,7 +8,7 @@ const stats = [
   { value: 130, suffix: "+", label: "Projetos entregues" },
   { value: 97, suffix: "%", label: "Clientes satisfeitos" },
   { value: 10, suffix: "", label: "Especialistas" },
-  { value: 100%, suffix: " anos", label: "de comprometimento" }
+  { value: 100, suffix: "%", label: "de comprometimento" }
 ]
 
 const features = [
