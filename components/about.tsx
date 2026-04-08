@@ -7,8 +7,7 @@ import { AnimatedCounter } from "@/components/animated-counter"
 const stats = [
   { value: 130, suffix: "+", label: "Projetos entregues" },
   { value: 97, suffix: "%", label: "Clientes satisfeitos" },
-  { value: 38, suffix: "", label: "Especialistas" },
-  { value: 7, suffix: " anos", label: "No mercado" },
+  { value: 10, suffix: "", label: "Especialistas" },
 ]
 
 const features = [
