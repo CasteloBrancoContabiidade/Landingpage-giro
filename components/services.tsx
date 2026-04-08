@@ -135,7 +135,7 @@ export function Services() {
             01 — Produtos
           </div>
 
-          <h2 className="text-[clamp(2.6rem,5vw,4.2rem)] font-bold tracking-[-0.02em] leading-none text-white mb-6">
+          <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-[-0.02em] leading-none text-white mb-6">
             O que a GiroHub
             <span className="text-[var(--orange)]"> entrega</span>
           </h2>
