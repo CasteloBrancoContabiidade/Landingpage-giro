@@ -47,7 +47,7 @@ export function About() {
             <em className="italic font-bold text-[var(--orange)]">propósito</em>
           </h2>
           <p className="text-[0.95rem] font-light text-[var(--muted)] leading-relaxed mb-5">
-            A GiroHub transforma ideias complexas em produtos digitais que funcionam de verdade. Somos 38 engenheiros, designers e estrategistas unidos por uma missão: fazer tecnologia que as pessoas usam com prazer.
+            A GiroHub transforma ideias complexas em produtos digitais que funcionam de verdade. Somos 7 desenvolvedores, designers e estrategistas unidos por uma missão: fazer tecnologia que as pessoas usam com prazer.
           </p>
           <p className="text-[0.95rem] font-light text-[var(--muted)] leading-relaxed mb-5">
             Não somos uma fábrica de software. Somos o parceiro técnico que seu negócio precisa para crescer sem travar.
