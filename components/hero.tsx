@@ -141,8 +141,8 @@ function Particles() {
 
 // ── Badges ───────────────────────────────────────────────────────────────────
 const BADGES = [
-  { label: "+120 projetos", sub: "entregues" },
-  { label: "8 anos",        sub: "de mercado" },
+  { label: "+10 projetos", sub: "entregues" },
+  { label: "2 anos",        sub: "de mercado" },
   { label: "ISO 27001",     sub: "certificado" },
 ]
 
